@@ -2,5 +2,17 @@
     "name": "Sprint Party",
     "description": "Chrome extension for a celebration when a user starts a sprint",
     "version": "1.0",
-    "manifest_version": 3
+    "manifest_version": 3,
+    "content_scripts": [
+        {
+            "matches": ["*://*.atlassian.net/jira/*"],
+            "js": ["sprint-party.js"]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "*://*.atlassian.net/*", "tabs", "webNavigation"
+      ]
   }
