@@ -8,11 +8,5 @@
             "matches": ["*://*.atlassian.net/jira/*"],
             "js": ["sprint-party.js"]
         }
-    ],
-    "background": {
-        "service_worker": "background.js"
-    },
-    "permissions": [
-        "*://*.atlassian.net/*", "tabs", "webNavigation"
-      ]
+    ]
   }
